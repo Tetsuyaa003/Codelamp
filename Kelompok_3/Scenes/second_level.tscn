@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvohum5gegemx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lt5xc"]
+
+[node name="Second_Level" type="Node2D"]
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_lt5xc")

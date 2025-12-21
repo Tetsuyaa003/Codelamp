@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://dml3nb8x774s7"]
+
+[node name="UI Manager" type="Node"]
+
+[node name="Main Menu" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Key Visual" type="Panel" parent="Main Menu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="Main Menu"]
+anchors_preset = -1
+anchor_left = 0.49300003
+anchor_top = 0.62600005
+anchor_right = 0.49300003
+anchor_bottom = 0.62600005
+offset_left = -23.936035
+offset_top = -15.648041
+offset_right = 23.063965
+offset_bottom = 15.351959
+grow_horizontal = 2
+grow_vertical = 2
+text = "PLAY
+"
+
+[node name="SettingsButton" type="Button" parent="Main Menu"]
+anchors_preset = -1
+anchor_left = 0.49100003
+anchor_top = 0.708
+anchor_right = 0.49100003
+anchor_bottom = 0.708
+offset_left = -40.63202
+offset_top = -15.783997
+offset_right = 41.36798
+offset_bottom = 15.216003
+text = "SETTINGS"
+
+[node name="ExitButton" type="Button" parent="Main Menu"]
+anchors_preset = -1
+anchor_left = 0.49300003
+anchor_top = 0.785
+anchor_right = 0.49300003
+anchor_bottom = 0.785
+offset_left = -19.936035
+offset_top = -15.680023
+offset_right = 21.063965
+offset_bottom = 15.319977
+text = "EXIT"
+
+[node name="Settings" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sound Manager" type="CanvasLayer" parent="Settings"]
+visible = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Sound Manager"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Settings/Sound Manager/HBoxContainer"]
+layout_mode = 2
+
+[node name="Master" type="Label" parent="Settings/Sound Manager/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "MASTER VOLUME"
+
+[node name="BGM" type="Label" parent="Settings/Sound Manager/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "BGM"
+
+[node name="SFX" type="Label" parent="Settings/Sound Manager/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "SFX"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Sound Manager/HBoxContainer"]
+layout_mode = 2
+
+[node name="HSlider2" type="HSlider" parent="Settings/Sound Manager/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Settings/Sound Manager/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSlider3" type="HSlider" parent="Settings/Sound Manager/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CANCEL" type="Button" parent="Settings"]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="OK" type="Button" parent="Settings"]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Level Manager" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="LevelCompletedPanel" type="Panel" parent="Level Manager"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main Menu" type="Button" parent="Level Manager/LevelCompletedPanel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Main Menu"
+
+[node name="GameOverPanel" type="Panel" parent="Level Manager"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Retry" type="Button" parent="Level Manager/GameOverPanel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Retry"
+
+[node name="Main Menu" type="Button" parent="Level Manager/GameOverPanel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Main Menu"
+
+[node name="Tutorial" type="Panel" parent="Level Manager"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pause" type="Panel" parent="Level Manager"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Resume" type="Button" parent="Level Manager/Pause"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Resume"
+
+[node name="Restart" type="Button" parent="Level Manager/Pause"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Restart"
+
+[node name="Settings" type="Button" parent="Level Manager/Pause"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Settings"
+
+[node name="Main Menu" type="Button" parent="Level Manager/Pause"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Main Menu"

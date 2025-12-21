@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhudvos7w7nvr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hla8l"]
+
+[node name="Key" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Looting Zone" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Looting Zone"]
+shape = SubResource("RectangleShape2D_hla8l")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cg3beyvdlxcip"]
+
+[ext_resource type="Script" uid="uid://b61bydim2vj32" path="res://Scenes/Enemy_Ground.gd" id="1_5naov"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_vjpd1"]
+[ext_resource type="Script" uid="uid://xo6woic2g01d" path="res://Scenes/wall_ray_cast.gd" id="3_v8bqw"]
+[ext_resource type="Script" uid="uid://cc20q7m035xv2" path="res://Scenes/ground_ray_cast.gd" id="4_od0b1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hll2y"]
+
+[node name="EnemyConfig" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_5naov")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+self_modulate = Color(8.123444, 0.91400975, 1.0341653, 1)
+position = Vector2(-4.7683716e-07, -4.7683716e-07)
+scale = Vector2(0.15624999, 0.15624999)
+texture = ExtResource("1_vjpd1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_hll2y")
+
+[node name="Wall_RayCast" type="RayCast2D" parent="."]
+script = ExtResource("3_v8bqw")
+
+[node name="Ground_RayCast" type="RayCast2D" parent="."]
+script = ExtResource("4_od0b1")
