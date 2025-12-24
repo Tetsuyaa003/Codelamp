@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfanka0gya2ry"]
+
+[ext_resource type="Script" uid="uid://bht8cimpevnps" path="res://Scripts/ui_scripts/start_menu.gd" id="1_qcq6k"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qcq6k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 832.00006
+offset_top = 360.0
+offset_right = 925.00006
+offset_bottom = 496.0
+scale = Vector2(2.7200012, 2.7200012)
+
+[node name="NewGame" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "New Game"
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+
+[node name="Option" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Option"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

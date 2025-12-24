@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://c42gk7js87mxt"]
 
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_3qicx"]
-[ext_resource type="PackedScene" uid="uid://dml3nb8x774s7" path="res://Scenes/ui_manager.tscn" id="1_aqlmp"]
-[ext_resource type="PackedScene" uid="uid://bdqh1nc24a047" path="res://Scenes/player_controller.tscn" id="2_3qicx"]
-[ext_resource type="PackedScene" uid="uid://cg3beyvdlxcip" path="res://Scenes/enemy_config.tscn" id="3_kin1b"]
+[ext_resource type="PackedScene" uid="uid://bdqh1nc24a047" path="res://Scenes/components/player_controller.tscn" id="1_udnv3"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_52e1d"]
+[ext_resource type="PackedScene" uid="uid://cwscku5o00viy" path="res://Scenes/components/ui_manager.tscn" id="3_o4am0"]
+[ext_resource type="PackedScene" uid="uid://cg3beyvdlxcip" path="res://Scenes/components/enemy_config.tscn" id="4_oyuyp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ccbq8"]
 size = Vector2(935.5, 55)
@@ -12,7 +12,7 @@ size = Vector2(935.5, 55)
 
 [node name="First_Level" type="Node2D"]
 
-[node name="PlayerController" parent="." instance=ExtResource("2_3qicx")]
+[node name="PlayerController" parent="." instance=ExtResource("1_udnv3")]
 position = Vector2(324, 285)
 
 [node name="Ground" type="StaticBody2D" parent="."]
@@ -20,15 +20,15 @@ position = Vector2(324, 285)
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
 position = Vector2(588, 337)
 scale = Vector2(7.265625, 0.42968747)
-texture = ExtResource("1_3qicx")
+texture = ExtResource("2_52e1d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2(587, 339)
 shape = SubResource("RectangleShape2D_ccbq8")
 
-[node name="UI Manager" parent="." instance=ExtResource("1_aqlmp")]
+[node name="UI Manager" parent="." instance=ExtResource("3_o4am0")]
 
-[node name="EnemyConfig" parent="." instance=ExtResource("3_kin1b")]
+[node name="EnemyConfig" parent="." instance=ExtResource("4_oyuyp")]
 position = Vector2(777, 277)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="EnemyConfig"]
