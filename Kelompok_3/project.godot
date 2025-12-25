@@ -11,13 +11,21 @@ config_version=5
 [application]
 
 config/name="I'll Handle This"
-run/main_scene="uid://c42gk7js87mxt"
+run/main_scene="uid://bfanka0gya2ry"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://Scripts/global.gd"
+GameManager="*res://Scenes/managers/GameManager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/resizable=false
+window/stretch/mode="canvas_items"
 
 [input]
 

@@ -1,8 +1,5 @@
 extends Node
 
-@onready var ray_wall = 
-@onready var ray_ground:
-
 var player_health : int = 5
 var key_has_collected: bool = false
 

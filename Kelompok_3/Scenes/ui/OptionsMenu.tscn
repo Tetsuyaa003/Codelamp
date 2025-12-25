@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2ei2bx81l34m"]
+
+[ext_resource type="Script" uid="uid://b2vawy7ggrno8" path="res://Scripts/ui_scripts/options_menu.gd" id="1_axdnb"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_axdnb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 704.00006
+offset_top = 248.00003
+offset_right = 891.00006
+offset_bottom = 435.00003
+scale = Vector2(2.5999997, 2.5999997)
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Options"
+horizontal_alignment = 1
+
+[node name="Music" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Music"]
+layout_mode = 2
+text = "Music / BGM"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Music"]
+layout_mode = 2
+max_value = 10.0
+
+[node name="SFX" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SFX"]
+layout_mode = 2
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/SFX"]
+layout_mode = 2
+max_value = 10.0
+
+[node name="Language" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Language"]
+layout_mode = 2
+text = "Language"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Language"]
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Indonesia"
+popup/item_1/id = 1
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="value_changed" from="VBoxContainer/Music/HSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/SFX/HSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="item_selected" from="VBoxContainer/Language/OptionButton" to="." method="_on_language_option_item_selected"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
