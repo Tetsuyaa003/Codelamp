@@ -5,12 +5,11 @@
 [ext_resource type="Script" uid="uid://xo6woic2g01d" path="res://Scripts/components/wall_ray_cast.gd" id="3_v8bqw"]
 [ext_resource type="Script" uid="uid://cc20q7m035xv2" path="res://Scripts/components/ground_ray_cast.gd" id="4_od0b1"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hll2y"]
 
 [node name="EnemyConfig" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["enemy"]]
 script = ExtResource("1_5naov")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
